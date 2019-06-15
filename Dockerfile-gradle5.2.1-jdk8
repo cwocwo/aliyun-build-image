@@ -8,5 +8,5 @@ ENV JAVA_HOME=/srv/java/jdk \
 RUN apt-get install -y unzip    
 RUN cd /tmp && \
     wget https://services.gradle.org/distributions/gradle-5.2.1-bin.zip && \
-    unzip gradle-5.2.1-bin.zip -d /srv/gradle  && \
-    ln -s /srv/java/jdk* /srv/java/jdk 
+    unzip gradle-5.2.1-bin.zip -d /srv/  && \
+ENV PATH=${PATH}:/srv/gradle-5.2.1/bin

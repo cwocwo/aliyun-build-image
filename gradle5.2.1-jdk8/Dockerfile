@@ -1,5 +1,8 @@
 FROM registry.cn-beijing.aliyuncs.com/rdc-builds/base:1.0   
 RUN sudo apt-get update && \
+    sudo apt-get install software-properties-common && \
+    sudo apt-get install python-software-properties && \
+    sudo add-apt-repository ppa:webupd8team/java
     sudo apt-get install oracle-java8-installer
 RUN cd /tmp && \
     wget https://services.gradle.org/distributions/gradle-5.2.1-bin.zip && \

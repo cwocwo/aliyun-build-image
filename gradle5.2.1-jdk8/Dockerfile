@@ -8,5 +8,6 @@ RUN sudo apt-get update && \
 RUN cd /tmp && \
     wget https://services.gradle.org/distributions/gradle-5.2.1-bin.zip && \
     unzip gradle-5.2.1-bin.zip -d /srv/ 
-ENV PATH=${PATH}:/srv/gradle-5.2.1/bin
-ENV GRADLE_HOME /srv/gradle-5.2.1/
+ENV GRADLE_HOME /srv/gradle-5.2.1 \
+    PATH=${PATH}:/srv/gradle-5.2.1/bin
+
